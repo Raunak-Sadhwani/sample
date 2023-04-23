@@ -18,7 +18,7 @@ app()->cors();
 // }
 
 app()->get('/', function () {
-	response()->response()->page('./welcome.html');
+	response()->page('./welcome.html');
 });
 app()->get('/notes', function () {
 	// notes where id = 1
