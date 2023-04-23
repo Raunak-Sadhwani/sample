@@ -11,11 +11,11 @@ app()->config('debug', false);
 // db()->autoConnect('127.0.0.1', 'test', 'root', '');
 
 app()->cors();
-// $app()->set404(
-// 	function () {
-// 		response()->page('./404.html');
-// 	}
-// );
+ $app()->set404(
+ 	function () {
+		response()->page('./welcome.html');
+ 	}
+ );
 // try {
 // 	db()->drop('dbname')->execute();
 // } catch (Exception $e) {
