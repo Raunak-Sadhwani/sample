@@ -18,10 +18,7 @@ app()->cors();
 // }
 
 app()->get('/', function () {
-	response()->json([
-		'hello' => 'word',
-		'foo' => 'bar',
-	]);
+	response()->response()->page('./welcome.html');
 });
 app()->get('/notes', function () {
 	// notes where id = 1
