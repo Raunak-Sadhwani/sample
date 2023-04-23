@@ -21,13 +21,14 @@ app()->get('/', function () {
 	response()->page('./welcome.html');
 });
 app()->get('/notes', function () {
-	// notes where id = 1
-	// $notes = db()->select('notes')->where('id', 2)->first();
-	// response()->json(
-	// 	$notes
-	// );
-		response()->page('./welcome.html');
-
+	response()->page('./welcome.html');
 });
 
+app()->set404(function () {
+	response()->json([
+		'hello' => 'word',
+		'foo' => 'bar',
+	]);
+  });
 app()->run();
+
